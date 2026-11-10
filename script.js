@@ -1,7 +1,4 @@
 
-/* =========================================
-   NOMAD — NAVIGATION ENGINE
-========================================= */
 
 const pages = document.querySelectorAll(".page");
 const navigationLinks = document.querySelectorAll("[data-page]");
@@ -11,20 +8,17 @@ const mainNavigation = document.querySelector(".main-navigation");
 let currentPage = "home";
 
 
-/* -----------------------------------------
-   CHANGE PAGE
------------------------------------------ */
 
 function changePage(pageName, addHistory = true) {
 
     const nextPage = document.getElementById(pageName);
 
-    // Make sure the requested page exists.
+   
     if (!nextPage || !nextPage.classList.contains("page")) {
         return;
     }
 
-    // Avoid unnecessary transitions.
+    
     if (pageName === currentPage) {
         return;
     }
@@ -49,7 +43,7 @@ function changePage(pageName, addHistory = true) {
 
         currentPage = pageName;
 
-        // Close the mobile navigation.
+        
         mainNavigation.classList.remove("open");
 
         window.scrollTo({
@@ -57,7 +51,7 @@ function changePage(pageName, addHistory = true) {
             behavior: "instant"
         });
 
-        // Keep the browser URL synchronized.
+      
         if (addHistory) {
             history.pushState(
                 { page: pageName },
@@ -68,8 +62,7 @@ function changePage(pageName, addHistory = true) {
     };
 
 
-    // Use the native View Transitions API where supported.
-    // This creates a smooth visual transition between pages.
+   
 
     if (document.startViewTransition) {
 
@@ -85,9 +78,7 @@ function changePage(pageName, addHistory = true) {
 }
 
 
-/* -----------------------------------------
-   NAVIGATION CLICK EVENTS
------------------------------------------ */
+
 
 navigationLinks.forEach(link => {
 
@@ -106,9 +97,7 @@ navigationLinks.forEach(link => {
 });
 
 
-/* -----------------------------------------
-   BROWSER BACK / FORWARD BUTTONS
------------------------------------------ */
+
 
 window.addEventListener("popstate", event => {
 
@@ -122,9 +111,7 @@ window.addEventListener("popstate", event => {
 });
 
 
-/* -----------------------------------------
-   MOBILE NAVIGATION
------------------------------------------ */
+
 
 menuToggle.addEventListener("click", () => {
 
@@ -133,9 +120,7 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-/* -----------------------------------------
-   CONTACT SECTION
------------------------------------------ */
+
 
 document.querySelectorAll('a[href="#contact"]').forEach(link => {
 
@@ -149,7 +134,7 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
 
             changePage("about");
 
-            // Wait until the page is rendered before scrolling.
+           
             setTimeout(() => {
 
                 const contactSection =
@@ -174,9 +159,7 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
 });
 
 
-/* -----------------------------------------
-   INITIAL PAGE FROM URL
------------------------------------------ */
+
 
 window.addEventListener("DOMContentLoaded", () => {
 
