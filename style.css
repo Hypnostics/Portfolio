@@ -1,8 +1,4 @@
 
-/* =========================================
-   NOMAD — GLOBAL DESIGN SYSTEM
-========================================= */
-
 :root {
     --background: #f5f4ef;
     --surface: #eeede6;
@@ -52,9 +48,7 @@ img {
 }
 
 
-/* =========================================
-   HEADER & NAVIGATION
-========================================= */
+
 
 .site-header {
     height: 88px;
@@ -130,11 +124,7 @@ img {
     background: none;
     cursor: pointer;
 }
-
-
-/* =========================================
-   PAGE TRANSITIONS
-========================================= */
+ 
 
 .page {
     display: none;
@@ -159,7 +149,7 @@ img {
     }
 }
 
-/* Native browser shared-element transitions */
+
 
 ::view-transition-old(root) {
     animation: pageExit 0.35s ease both;
@@ -191,10 +181,7 @@ img {
     }
 }
 
-
-/* =========================================
-   HERO SECTION
-========================================= */
+/* Hero */
 
 .hero-section {
     height: min(760px, 78vw);
@@ -323,9 +310,7 @@ h2 em {
 }
 
 
-/* =========================================
-   SECTION LAYOUT
-========================================= */
+/* layout */
 
 .section-padding {
     padding: 110px 9%;
@@ -346,9 +331,7 @@ h2 em {
 }
 
 
-/* =========================================
-   INTRODUCTION
-========================================= */
+/* intro */
 
 .intro-content {
     padding: 85px 0 20px;
@@ -392,9 +375,7 @@ h2 em {
 }
 
 
-/* =========================================
-   DESTINATION CARDS
-========================================= */
+/*destination cards*/
 
 .destination-grid {
     display: grid;
@@ -484,9 +465,7 @@ h2 em {
 }
 
 
-/* =========================================
-   QUOTE SECTION
-========================================= */
+/* quote */
 
 .quote-section {
     padding: 120px 8%;
@@ -514,9 +493,7 @@ h2 em {
 }
 
 
-/* =========================================
-   EXPERIENCE PREVIEW
-========================================= */
+/* Exp review */
 
 .experience-layout {
     display: grid;
@@ -555,9 +532,7 @@ h2 em {
 }
 
 
-/* =========================================
-   INNER PAGE BANNERS
-========================================= */
+/* Inner banner */
 
 .page-banner {
     padding: 110px 9% 90px;
@@ -579,9 +554,7 @@ h2 em {
 }
 
 
-/* =========================================
-   ALL DESTINATIONS
-========================================= */
+/*all destinations*/
 
 .all-destinations-grid {
     display: grid;
@@ -595,9 +568,7 @@ h2 em {
 }
 
 
-/* =========================================
-   EXPERIENCE PAGE
-========================================= */
+/*Exp page*/
 
 .experience-list {
     display: flex;
@@ -644,9 +615,7 @@ h2 em {
 }
 
 
-/* =========================================
-   JOURNAL
-========================================= */
+/*Journal */
 
 .journal-grid {
     display: grid;
@@ -687,9 +656,7 @@ h2 em {
 }
 
 
-/* =========================================
-   ABOUT
-========================================= */
+/*about*/
 
 .about-section {
     display: grid;
@@ -736,10 +703,7 @@ h2 em {
     color: #b7c0a7;
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
+/*Footer*/
 
 .site-footer {
     padding: 50px 7%;
@@ -762,9 +726,7 @@ h2 em {
 }
 
 
-/* =========================================
-   RESPONSIVE DESIGN
-========================================= */
+/*responsive*/
 
 @media (max-width: 900px) {
 
@@ -930,7 +892,7 @@ h2 em {
 }
 
 
-/* Respect accessibility preferences */
+/* respect accessibility preferences */
 
 @media (prefers-reduced-motion: reduce) {
     *,
